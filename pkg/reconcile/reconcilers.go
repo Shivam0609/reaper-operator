@@ -318,6 +318,7 @@ func (r *defaultReconciler) ReconcileDeployment(ctx context.Context, req ReaperR
 			deployment.Spec.Template.Labels = desiredDeployment.Spec.Template.Labels
 			deployment.Spec.Template.Annotations = desiredDeployment.Spec.Template.Annotations
 			deployment.Spec.Template.Spec.Containers = desiredDeployment.Spec.Template.Spec.Containers
+			deployment.Spec.Template.Spec.InitContainers = desiredDeployment.Spec.Template.Spec.InitContainers
 
 			deployment.Spec.MinReadySeconds = desiredDeployment.Spec.MinReadySeconds
 			deployment.Spec.Paused = desiredDeployment.Spec.Paused
